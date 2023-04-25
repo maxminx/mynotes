@@ -1,10 +1,40 @@
 # linux
 
+## Arch&Manjaro包管理
+
+```bash
+yay#syn and update
+yay typora#search package and show availables
+yay -Syu typora#install typora
+yay -Sc#clean cache
+yay -Rs#remove package and dependences
+```
+
+linux命令
+
 ## <mark>linux命令</mark>
 
 1:cut
 
 cut  -d " "  -f1,2   tp.txt
+
+2:basename
+
+## 视频相关命令
+
+1：从摄像头获取一帧图片
+
+v4l2-ctl  --set-fmt-video=width=320,height=240,pixelformat=YUYV   --stream-mmap --stream-count=1   --stream-to=grab-320x240-yuyv.raw
+
+2：把yuv转换成png图片
+
+ffmpeg -s 320x240 -pix_fmt yuyv422 -i grab-320x240-yuyv.raw grab.png
+
+查看系统资源
+
+1:vmstat
+
+vmstat n m//采样m次，每次采样花n秒
 
 ## <mark>linux应用 </mark>
 
@@ -16,11 +46,23 @@ bash <(curl -s -L https://git.io/v2ray.sh)
 
 vmess选择websockt协议，别选择tcp，容易被公司内网搞混乱导致outbound fail
 
-### 安装微信容器
+### docker介绍
 
+1：免sudo权限
+
+```bash
+sudo usermod -aG docker $USER #添加当前用户到docker组
+systemctl restart docker #重启docker服务
+重启打开shell会话
+```
+
+2：安装微信
+
+```bash
 sudo docker pull bestwu/wechat
 
-docker run -d --name wechat --device /dev/snd --ipc=host  -v /tmp/.X11-unix:/tmp/.X11-unix  -v $HOME/WeChatFiles:/WeChatFiles  -e DISPLAY=unix$DISPLAY  -e XMODIFIERS=@im=fcitx  -e QT_IM_MODULE=fcitx  -e GTK_IM_MODULE=fcitx  -e AUDIO_GID=`getent group audio | cut -d: -f3`  -e GID=`id -g`  -e UID=`id -u`  bestwu/wechat
+docker run -d --name wechat --device /dev/snd --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/WeChatFiles:/WeChatFiles -e DISPLAY=unix$DISPLAY -e XMODIFIERS=@im=fcitx -e QT_IM_MODULE=fcitx -e GTK_IM_MODULE=fcitx -e AUDIO_GID=`getent group audio | cut -d: -f3` -e GID=`id -g` -e UID=`id -u` bestwu/wechat
+```
 
 refrence:https://weisenhui.top/posts/54453.html
 
@@ -39,3 +81,13 @@ refrence:https://weisenhui.top/posts/54453.html
 1：编译opencv库时，发生所需要依赖库的位置冲突，系统库位置和ananconda里面库的位置。
 
 ​    方案：在系统变量PATH中去掉anaconda路径，cmake-gui清楚缓存后重新配置、生成 
+
+## <mark>Linux内核</mark>
+
+驱动开发入门
+
+子系统v4l2
+
+[linux V4L2子系统——v4l2架构（1）之整体架构_楓潇潇的博客-CSDN博客
+
+[V4l2框架分析_v4l2框架流程_welljrj的博客-CSDN博客](https://blog.csdn.net/welljrj/article/details/105578727?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-105578727-blog-114996084.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-2-105578727-blog-114996084.pc_relevant_default&utm_relevant_index=5)](https://blog.csdn.net/u013836909/article/details/125359789)

@@ -58,9 +58,6 @@ trtexec --shapes=input:1x3x224x224 --loadEngine=resnet_engine.trt
 参考：
 https://zhuanlan.zhihu.com/p/411522457
 
+## 减枝
 
-
-
-
-
-
+训练后对某些卷积核norm小于阈值，则删除，再tune训练

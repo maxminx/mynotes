@@ -49,6 +49,12 @@ git stash -a：暂存更改到本地，不记录git跟踪
 
 重移动重命名：git branch -M main
 
+已经clone的前提下，再拉取某个特定的版本：
+
+git checkout -b <本地分支名称>   origin/<远程分支名称>
+
+git pull origin  远程分支名称
+
 ## update
 
 git add .    跟踪改动过的文件

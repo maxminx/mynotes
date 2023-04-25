@@ -21,3 +21,28 @@ https://www.cnblogs.com/IcanFixIt/p/7518146.html
 
 https://cloud.tencent.com/developer/article/1170510?from=article.detail.1968977&areaSource=106000.9&traceId=MDCR2-WRpFsaZVqauadRR
 
+## 六大设计原则solid
+
+1：单一原则 single responsibility
+
+2：开闭原则open closed principle
+
+3：里氏替换原则Liskov substitution
+
+4：最小知道原则law of demeter
+
+5：接口隔离原则 interface segregation
+
+接口：事物的顶层抽象，具体形式有：抽象类、模板、函数签名(函数指针、callable object）、某些设计模式(迭代器、观察者、订阅发布等)。目的是隔离具体的实现。
+
+
+
+6：依赖倒置原则dependence inversion
+
+
+
+## 设计模式
+
+1：工厂模式，从简单工厂--->基于模板的自动注册的工厂模式
+
+https://zhuanlan.zhihu.com/p/268462046
