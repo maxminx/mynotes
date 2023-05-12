@@ -20,6 +20,8 @@ cut  -d " "  -f1,2   tp.txt
 
 2:basename
 
+3：sync强制把内存的缓冲区buffer更新到磁盘
+
 ## 视频相关命令
 
 1：从摄像头获取一帧图片
@@ -46,25 +48,7 @@ bash <(curl -s -L https://git.io/v2ray.sh)
 
 vmess选择websockt协议，别选择tcp，容易被公司内网搞混乱导致outbound fail
 
-### docker介绍
-
-1：免sudo权限
-
-```bash
-sudo usermod -aG docker $USER #添加当前用户到docker组
-systemctl restart docker #重启docker服务
-重启打开shell会话
-```
-
-2：安装微信
-
-```bash
-sudo docker pull bestwu/wechat
-
-docker run -d --name wechat --device /dev/snd --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/WeChatFiles:/WeChatFiles -e DISPLAY=unix$DISPLAY -e XMODIFIERS=@im=fcitx -e QT_IM_MODULE=fcitx -e GTK_IM_MODULE=fcitx -e AUDIO_GID=`getent group audio | cut -d: -f3` -e GID=`id -g` -e UID=`id -u` bestwu/wechat
-```
-
-refrence:https://weisenhui.top/posts/54453.html
+###refrence:https://weisenhui.top/posts/54453.html
 
 ## <mark>linux系统</mark>
 

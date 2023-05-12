@@ -35,14 +35,39 @@ https://cloud.tencent.com/developer/article/1170510?from=article.detail.1968977&
 
 接口：事物的顶层抽象，具体形式有：抽象类、模板、函数签名(函数指针、callable object）、某些设计模式(迭代器、观察者、订阅发布等)。目的是隔离具体的实现。
 
-
-
 6：依赖倒置原则dependence inversion
-
-
 
 ## 设计模式
 
 1：工厂模式，从简单工厂--->基于模板的自动注册的工厂模式
 
 https://zhuanlan.zhihu.com/p/268462046
+
+2：单例模式
+
+单例的双锁检验，在某些平台或编译器会失效。
+
+简单无误的局部静态变量模式
+
+```c++
+class Singleton
+{
+public:
+    ~Singleton(){
+        std::cout<<"destructor called!"<<std::endl;
+    }
+    Singleton(const Singleton&)=delete;
+    Singleton& operator=(const Singleton&)=delete;
+    static Singleton& get_instance(){
+        static Singleton instance;
+        return instance;
+
+    }
+private:
+    Singleton(){
+        std::cout<<"constructor called!"<<std::endl;
+    }
+};
+```
+
+[C++ 单例模式和可继承的单例基类模板_c++ 单例 基类_panamera12的博客-CSDN博客](https://blog.csdn.net/wteruiycbqqvwt/article/details/124852912)

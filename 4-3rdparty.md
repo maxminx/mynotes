@@ -1,4 +1,12 @@
-# 
+## 一：工具类库
+
+##### 1：log4cpp
+
+三个主要组件：日志类别category、输出源appender、布局layout
+
+[log4cpp 的使用_log4cpp使用-CSDN博客](https://blog.csdn.net/mj348940862/article/details/127670078)
+
+## 二：多媒体
 
 音视频流媒体开发主要流程
 
@@ -6,7 +14,7 @@
 
 渲染包含：AR特效、贴纸、美颜等，技术(opencv、openGL)
 
-# openCV
+##### 1：openCV
 
 1：Mat类
 
@@ -18,7 +26,7 @@ Mat G;
 A.copyTo(G);
 ```
 
-## ffmpeg
+##### 2：ffmpeg
 
 参考
 
@@ -52,8 +60,6 @@ ffmpeg -re -stream_loop 100 -i  test.mp4 -c copy   -rtsp_transport tcp      -f r
 推RTMP流
 
 ffmpeg -re -stream_loop 100 -i test.mp4 -c:v libx264 -c:a aac  -f flv  rtmp://localhost/mystream
-
-
 
 浏览器接收：  http://localhost:8888/mystream/
 
@@ -125,7 +131,7 @@ av_dict_set(&dictParam,"profile","main",0);
 avcodec_open2(pCodecCtx, pCodec,&dictParam);
 ```
 
-## 编码技术
+##### 3：编码技术x264&x265
 
 1：预测编码
 
@@ -141,7 +147,7 @@ avcodec_open2(pCodecCtx, pCodec,&dictParam);
 
     根据信号出现的概率来编码，类似哈弗曼编码
 
-## X264
+X264
 
 0：问题
 
@@ -153,4 +159,4 @@ avcodec_open2(pCodecCtx, pCodec,&dictParam);
 
 2：IDR帧，就是GOP组的第一帧，是个特殊的I帧。IDR帧告诉解码器清空缓存区，解析新的GOP。
 
-## openGL
+##### 4：openGL
