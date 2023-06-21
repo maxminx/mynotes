@@ -1,4 +1,4 @@
-# Camera
+[[sensors]]
 
 ## 1. ISP
 

@@ -66,6 +66,7 @@ L3算力需求为：20-30TOPS，每一级相差十倍算力
 | STL源码剖析       |     | Redis设计与实现   |
 | C++编程规范       |     | 恰如其分的软件架构    |
 | 深入理解C++11     |     |              |
+|               |     |              |
 
 https://mp.weixin.qq.com/s/ifypkq4tsQb8uuqRUqCXgQ
 
@@ -97,7 +98,57 @@ C++技术开发的发展方向有哪些？
 
 九、人工智能，偏向于算法的研究，了解机器学习；
 
-作者：开课吧小易  
-链接：https://juejin.cn/post/6969100175100903454  
-来源：稀土掘金  
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+小米手机刷机参考
+
+https://miuiver.com/how-to-flash-xiaomi-phone/
+
+https://zhuanlan.zhihu.com/p/408114647
+
+[MiUnlock 解锁工具下载合集 &#8211; MIUI历史版本](https://miuiver.com/miunlock/)
+
+[小米帮助中心-小米商城](https://www.mi.com/service/support/rom)
+
+markdown插入latex数学公式
+
+https://zhuanlan.zhihu.com/p/59412540
+
+latex数学运算符号
+
+https://www.cnblogs.com/dingdangsunny/p/12312966.html
+
+
+工具软件
+obsidian和Boardmix
+
+开源路由OMV和虚拟机方案
+
+https://zhuanlan.zhihu.com/p/138254689
+
+
+
+开源的照片管理工具
+
+https://github.com/Piwigo/Piwigo
+
+mermaid使用
+https://juejin.cn/post/7109338415149088804
+
+https://support.typora.io/Draw-Diagrams-With-Markdown/#class-diagrams
+
+
+sqllit学习
+https://www.yiibai.com/sqlite/quick-start.html
+
+rk3568摄像头驱动
+https://blog.csdn.net/daocaokafei/article/details/128045530
+ISP tuning介绍
+https://blog.csdn.net/MyArrow/article/details/128096458
+
+int8量化
+https://zhuanlan.zhihu.com/p/516116539
+
+负反馈PID
+https://blog.csdn.net/IHTY_NUI/article/details/112339853
+
+3d\$机器人
+https://www.guyuehome.com/blog/column/id/149
